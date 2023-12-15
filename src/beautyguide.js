@@ -2,14 +2,17 @@ const beauty = {
   tip1: {
     name: "coconut water",
     image: "/images/coconut.jpg",
+    status: "not done",
   },
   tip2: {
-    name: "breath",
+    name: "nasal breathing",
     image: "/images/breath.jpg",
+    status: "done",
   },
   tip3: {
-    name: "posture",
-    image: "/images/postures.jpg",
+    name: "proper posture",
+    image: "/images/posture.jpg",
+    status: "done",
   },
 };
 
