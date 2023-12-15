@@ -13,8 +13,10 @@ class App extends React.Component {
   loadBeautyGuide = () => {
     this.setState({ beauty: beautyguide });
   };
-  loadSomething = () => {
-    console.log("loaded");
+  addToList = (key) => {
+    const list = { ...this.state.list };
+    list[key] = list[key] + 1 || 1; //***change so it just populates a todolist */
+    this.setState({ list });
   };
   render() {
     return (
@@ -22,19 +24,23 @@ class App extends React.Component {
         <Header tagline="Looks Maxxxing 101" />
         <ul className="fishes">
           {Object.keys(this.state.beauty).map((key) => (
-            <Beauty key={key} index={key} details={this.state.beauty[key]} />
-            //keys used like literal keys so that u can access the object and change state
+            <Beauty
+              key={key}
+              index={key}
+              details={this.state.beauty[key]}
+              addToList={this.addToList}
+            />
           ))}
         </ul>
         <Inventory loadBeautyGuide={this.loadBeautyGuide} />
-        <ToDoList
-          beauty={this.state.beauty}
-          list={this.state.list}
-          loadSomething={this.loadSomething}
-        />
+        <div>
+          <ToDoList beauty={this.state.beauty} list={this.state.list} />
+        </div>
       </div>
     );
   }
 }
 
 export default App;
+
+//todolist should have a written list of things accomplished

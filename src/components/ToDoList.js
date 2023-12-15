@@ -2,9 +2,11 @@ import React from "react";
 
 class ToDoList extends React.Component {
   render() {
+    const listIds = Object.keys(this.props.list);
+
     return (
-      <div>
-        <button onClick={this.props.loadSomething}>....</button>
+      <div className="order-wrap">
+        <h2>{listIds}</h2>
       </div>
     );
   }
@@ -12,5 +14,4 @@ class ToDoList extends React.Component {
 
 export default ToDoList;
 
-//connect keys
-//get beautyTip to console.log
+//display done ones to this list(done, kinda)
