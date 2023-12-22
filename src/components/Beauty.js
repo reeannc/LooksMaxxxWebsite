@@ -21,4 +21,4 @@ class Beauty extends React.Component {
 
 export default Beauty;
 
-//populate a list
+//add animation done or do this now

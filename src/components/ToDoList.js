@@ -2,11 +2,18 @@ import React from "react";
 
 class ToDoList extends React.Component {
   render() {
-    const listIds = Object.keys(this.props.list);
+    const listIds = Object.keys(this.props.beauty);
+
+    console.log(listIds);
 
     return (
       <div className="order-wrap">
-        <h2>{listIds}</h2>
+        <h3>Tasks Done:</h3>
+        <ul>
+          {listIds.map((key) => (
+            <li key={key}>{listIds}</li>
+          ))}
+        </ul>
       </div>
     );
   }
@@ -14,4 +21,4 @@ class ToDoList extends React.Component {
 
 export default ToDoList;
 
-//display done ones to this list(done, kinda)
+//display name of tip not index
