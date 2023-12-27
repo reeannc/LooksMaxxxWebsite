@@ -13,9 +13,15 @@ class App extends React.Component {
   loadBeautyGuide = () => {
     this.setState({ beauty: beautyguide });
   };
+  updateList = (key, updatedList) => {
+    const beauty = { ...this.state.beauty };
+    beauty[key] = updatedList;
+    this.setState({ beauty });
+  };
+
   addToList = (key) => {
     const list = { ...this.state.list };
-    list[key] = list[key] + 1 || 1; //***change so it just populates a todolist */
+    list[key] = list[key] + 1 || 1;
     this.setState({ list });
   };
   render() {
@@ -32,7 +38,10 @@ class App extends React.Component {
             />
           ))}
         </ul>
-        <Inventory loadBeautyGuide={this.loadBeautyGuide} />
+        <Inventory
+          loadBeautyGuide={this.loadBeautyGuide}
+          updateList={this.updateList}
+        />
         <div>
           <ToDoList beauty={this.state.beauty} list={this.state.list} />
         </div>
@@ -42,5 +51,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-//todolist should have a written list of things accomplished

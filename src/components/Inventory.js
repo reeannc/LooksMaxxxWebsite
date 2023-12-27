@@ -1,5 +1,6 @@
 import propTypes from "prop-types";
 import React from "react";
+import EditToDoList from "./EditToDoList";
 
 class Inventory extends React.Component {
   staticPropTypes = {
@@ -18,6 +19,3 @@ class Inventory extends React.Component {
 }
 
 export default Inventory;
-
-//start where it works and see if it shows , do one step at a time
-//are keys working?

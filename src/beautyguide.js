@@ -1,15 +1,15 @@
 const beauty = {
-  tip1: {
+  coconut_water: {
     name: "coconut water",
     image: "/images/coconut.jpg",
     status: "not done",
   },
-  tip2: {
+  nasal_breathing: {
     name: "nasal breathing",
     image: "/images/breath.jpg",
     status: "done",
   },
-  tip3: {
+  proper_posture: {
     name: "proper posture",
     image: "/images/posture.jpg",
     status: "done",

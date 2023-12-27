@@ -2,7 +2,8 @@ import React from "react";
 
 class Beauty extends React.Component {
   handleClick = () => {
-    this.props.addToList(this.props.index);
+    this.props.addToList(this.props.index); //not needed
+    //add function to change status
   };
   render() {
     const { image, name, status } = this.props.details;
@@ -21,4 +22,7 @@ class Beauty extends React.Component {
 
 export default Beauty;
 
-//add animation done or do this now
+//if "done" clicked, change status to done
+//use props, upstream to change
+//where to look
+//add logo 'done'

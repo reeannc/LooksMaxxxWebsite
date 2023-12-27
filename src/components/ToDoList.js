@@ -2,16 +2,13 @@ import React from "react";
 
 class ToDoList extends React.Component {
   render() {
-    const listIds = Object.keys(this.props.beauty);
-
-    console.log(listIds);
-
+    const listIds = Object.keys(this.props.list);
     return (
       <div className="order-wrap">
         <h3>Tasks Done:</h3>
         <ul>
-          {listIds.map((key) => (
-            <li key={key}>{listIds}</li>
+          {listIds.map((key, index) => (
+            <li key={index}>{key}</li>
           ))}
         </ul>
       </div>
@@ -20,5 +17,3 @@ class ToDoList extends React.Component {
 }
 
 export default ToDoList;
-
-//display name of tip not index
