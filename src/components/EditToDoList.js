@@ -29,3 +29,4 @@ export default EditToDoList;
 
 //status doesnt need to be changed
 //when button clicked, add that red square
+//put the css styles on button-style

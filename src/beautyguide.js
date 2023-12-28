@@ -2,7 +2,7 @@ const beauty = {
   coconut_water: {
     name: "coconut water",
     image: "/images/coconut.jpg",
-    status: "not done",
+    status: "done",
   },
   nasal_breathing: {
     name: "nasal breathing",

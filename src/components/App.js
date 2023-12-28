@@ -13,11 +13,6 @@ class App extends React.Component {
   loadBeautyGuide = () => {
     this.setState({ beauty: beautyguide });
   };
-  updateList = (key, updatedList) => {
-    const beauty = { ...this.state.beauty };
-    beauty[key] = updatedList;
-    this.setState({ beauty });
-  };
 
   addToList = (key) => {
     const list = { ...this.state.list };
@@ -38,10 +33,7 @@ class App extends React.Component {
             />
           ))}
         </ul>
-        <Inventory
-          loadBeautyGuide={this.loadBeautyGuide}
-          updateList={this.updateList}
-        />
+        <Inventory loadBeautyGuide={this.loadBeautyGuide} />
         <div>
           <ToDoList beauty={this.state.beauty} list={this.state.list} />
         </div>
